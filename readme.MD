@@ -21,11 +21,11 @@ The next step was to save this data on persistant storage for which we have used
 ## How to use?
 I have used a simple application to test the working of CRUD. The application is about Celebrity Character Profile Management. 
 You add a character name, tv show and celeb id for internal purpose but not very relevant. You can add a celeb and query with celeb name using the homepage.
-Clone the repository and run `npm install`
+- Clone the repository and run `npm install`
 Using below scripts to run different features,
-`npm run bothmem` - to perform CRUD on both inMemory and persistant storage.
-`npm run inmem` - to perform CRUD only on inMemory
-`npm test` -  to run the tests
+- `npm run bothmem` - to perform CRUD on both inMemory and persistant storage.
+- `npm run inmem` - to perform CRUD only on inMemory
+- `npm test` -  to run the tests
 As soon as you run the above commands you can now go to http://localhost:3000 to access the homepage of the app.
 
 ## Testing 
