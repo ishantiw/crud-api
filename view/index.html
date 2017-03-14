@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Celebrity Profile Management</title>
+</head>
+
+<body>
+
+    <h1>Celebrity's character Profile Management</h1>
+    <marquee width="50%">Please add a celebrity with his/her charater name and tv show</marquee>
+
+    <form action="/addceleb" method="POST">
+        <input type="text" placeholder="Celeb Id (Only numbers)" name="id">
+        <input type="text" placeholder="Celeb Name" name="cname">
+        <input type="text" placeholder="Celeb Show" name="tvshow">
+        <button type="submit">Add a character</button>
+    </form>
+<br>
+    <form action="/getceleb" method="GET">
+        <input type="text" placeholder="Type a char Name.." name="cname">
+        <button type="submit">Search by name</button>
+    </form>
+
+</body>
+</html>
