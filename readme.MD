@@ -3,6 +3,9 @@ This API works on data stored in In-Memory for which we are uisng [NeDB](https:/
 We are using [modli](https://github.com/node-modli/modli) as an API to define the schema and the crud operation. This was the initial goal of this project. 
 The next step was to save this data on persistant storage for which we have used [MongoDB](https://www.mongodb.com/) and using [Mongoose](http://mongoosejs.com/) for data modeling which is under `/model/mongodbModel`.
 
+
+[![Build Status](https://travis-ci.org/ishantiw/crud-api.svg?branch=master)](https://travis-ci.org/ishantiw/crud-api)
+
 ## Projects directory
      .
     ├── model                  # Datamodel for different databases
