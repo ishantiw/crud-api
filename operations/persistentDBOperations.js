@@ -19,7 +19,13 @@ class PersistentCrudOperations {
         this.celebModel = CelebModel;
 
     }
-
+/**
+   * A function that takes details of a celeb and return promise with value true
+   * @param {number}      celebID      A number which tells the id of a celeb
+   * @param {string}      celebName    Name of the celebrity
+   * @param {string}      celebTvshow  Name of the TV show for a celeb
+   * @returns  {promise}    promise A promise object that resolves 'true' if the insertion was successful
+*/
     add(celebID, celebName, celebTvshow) {
         return new Promise((resolve, reject) => {
             this.mongoose.connect(this.mongoURL, (err) => {
@@ -37,7 +43,11 @@ class PersistentCrudOperations {
             })
         });
     }
-
+/**
+   * A function that takes the name of a celeb and returns one or more celeb names that are matched 
+   * @param {string}      celebName    Name of the celebrity
+   * @returns  {promise}    promise  A promise object which resolves all the celebrities matched
+*/
     read(celebName) {
         return new Promise((resolve, reject) => {
             this.mongoose.connect(this.mongoURL, (err) => {
@@ -50,7 +60,11 @@ class PersistentCrudOperations {
             })
         })
     }
-
+/**
+   * A function that takes the name of a celeb and returns one or more celeb names that are matched 
+   * @param {string}      celebID    Internal mongodb ID for a record of celeb
+   * @returns  {promise}    promise  A promise object which resolves the deleted celeb
+*/
     delete(celebID) {
         return new Promise((resolve, reject) => {
             this.mongoose.connect(this.mongoURL, (err) => {
@@ -68,7 +82,12 @@ class PersistentCrudOperations {
             })
         });
     }
-
+/**
+   * A function that takes the name of a celeb and returns one or more celeb names that are matched 
+   * @param {string}      celebName    Name of the celebrity
+   * @param {object}      celebData    An object that contains celebName, celebNumber and celebTvshow
+   * @returns  {promise}    promise  A promise object which resolves the updated celebrity
+*/
     update(celebID, celebData) {
         return new Promise((resolve, reject) => {
             this.mongoose.connect(this.mongoURL, (err) => {
