@@ -27,7 +27,7 @@ class PersistentCrudOperations {
 */
     add(celebID, celebName, celebTvshow) {
         return new Promise((resolve, reject) => {
-            this.mongoose.connect(this.mongoURL, (err) => {
+            this.mongoose.createConnection(this.mongoURL, (err) => {
                 if (err) return console.log(err)
 
                 let celebInstance = new CelebModel();
@@ -49,7 +49,7 @@ class PersistentCrudOperations {
 */
     read(celebName) {
         return new Promise((resolve, reject) => {
-            this.mongoose.connect(this.mongoURL, (err) => {
+            this.mongoose.createConnection(this.mongoURL, (err) => {
                 CelebModel.find({
                     cname: celebName
                 }, (err, celebs) => {
@@ -66,7 +66,7 @@ class PersistentCrudOperations {
 */
     delete(celebID) {
         return new Promise((resolve, reject) => {
-            this.mongoose.connect(this.mongoURL, (err) => {
+            this.mongoose.createConnection(this.mongoURL, (err) => {
                 CelebModel.findById(celebID, (err, celeb) => {
                     if (err) reject(err);
 
@@ -89,7 +89,7 @@ class PersistentCrudOperations {
 */
     update(celebID, celebData) {
         return new Promise((resolve, reject) => {
-            this.mongoose.connect(this.mongoURL, (err) => {
+            this.mongoose.createConnection(this.mongoURL, (err) => {
                 CelebModel.findById(celebID, (err, celeb) => {
                     if (err) reject(err);
 
