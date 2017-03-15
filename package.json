@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --timeout 10000",
     "bothmem": "nodemon CRUD.js",
-    "inmem": "nodemon operations/crudInMemoryOnly"
+    "inmem": "nodemon operations/crudInMemoryOnly",
+    "start": "nodemon CRUD.js"
   },
   "author": "Ishan Tiwari <ishan210788@gmail.com>",
   "license": "ISC",
