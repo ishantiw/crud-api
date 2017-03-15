@@ -1,4 +1,3 @@
-'use strict'
 /**
 * Using modli(http://node-modli.github.io/modli/) to create data schema for NeDB database
 * @author Ishan Tiwari <ishan210788@gmail.com>

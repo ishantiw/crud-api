@@ -1,4 +1,3 @@
-'use strict';
 /**
  * Class having functions for performing CRUD operation for In-memory database NeDB
  * @author Ishan Tiwari <ishan210788@gmail.com>

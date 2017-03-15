@@ -1,4 +1,3 @@
-'use strict';
 /**
  * Testing CRUD operations using in-memory and persistant storage. 
  * Karma as test runner
@@ -6,17 +5,15 @@
  * @author Ishan Tiwari <ishan210788@gmail.com>
  */
 process.env.NODE_ENV = 'test';
-let mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const expect = require('chai').expect;
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
-let chaiHttp = require('chai-http');
-const PersistenceOperations = require('../operations/persistentDBOperations');
-const persistenceOps = new PersistenceOperations();
+const chaiHttp = require('chai-http');
 chai.use(chaiHttp);
 const server = require('../CRUD');
-let should = chai.should();
+const should = chai.should();
 
 //Our parent block
 describe('Celebs', () => {
