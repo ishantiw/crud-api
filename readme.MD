@@ -20,7 +20,7 @@ The next step was to save this data on persistant storage for which we have used
 
 ## How to use?
 I have used a simple application to test the working of CRUD. The application is about Celebrity Character Profile Management. 
-You add a character name, tv show and celeb id for internal purpose but not very relevant. You can add a celeb and query with celeb name using the homepage.
+You add a character name, tv show and celeb id for internal purpose but not very relevant. You can add a celeb and query with celeb name using the homepage. Its deployed in Heroku and you can use it here https://ishan-crud-api.herokuapp.com
 - Clone the repository and run `npm install`
 Using below scripts to run different features,
 - `npm run bothmem` - to perform CRUD on both inMemory and persistant storage.
@@ -32,6 +32,7 @@ As soon as you run the above commands you can now go to http://localhost:3000 to
 Using Mocha and Chai as they have asynch support including promises. I have used Postman to make fast HTTP requests to the api to check if all the HTTP requests are working fine.
 I have used describe blocks of code to better organize assertions and so organizing the output when you run the test. 
 ### Things which can be done to improve
+
 - we can also mongodb mock ups to test instead of creating a real connection and playing with real database.
 - Could's done more indepth response testing, like what are the properties and what is the value.(I was sending HTML responses which were difficult to test, I only changed it for GET method)
 
